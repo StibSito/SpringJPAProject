@@ -75,7 +75,7 @@
 									th:field="*{idproveedor}">
 									<option selected value="0">Seleccione...</option>
 									<option th:each="e : ${lstProveedores}"
-									th:value="${e.idproveedor}" th:text="${e.nombre_rs}"></option>
+										th:value="${e.idproveedor}" th:text="${e.nombre_rs}"></option>
 								</select>
 							</div>
 
@@ -115,7 +115,9 @@
 									<td th:text="${p.idcategoria}"></td>
 									<td th:text="${p.est_prod}"></td>
 									<td th:text="${p.idproveedor}"></td>
-									<td><a href="" class="btn btn-outline-primary">Editar</a></td>
+									<td><a th:href="@{'/editarProducto/' + ${p.id_prod}}"
+										class="btn btn-outline-primary">Editar</a></td>
+
 								</tr>
 							</tbody>
 
