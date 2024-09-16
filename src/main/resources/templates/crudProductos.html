@@ -20,7 +20,7 @@
 				<div class="row">
 
 					<div class="col">
-						<form action="/leer" method="post" th:object="${producto}">
+						<form action="/registrar" method="post" th:object="${producto}">
 							<div class="col-12">
 								<label for="inputAddress" class="form-label">Codigo</label> <input
 									class="form-control" id="inputcode" name="txtcodigo"
@@ -105,7 +105,7 @@
 									<th>Acciones</th>
 								</tr>
 							</thead>
-							<tbody>
+
 							<tbody>
 								<tr th:each="p : ${lstProductos}">
 									<th scope="row" th:text="${p.id_prod}"></th>
@@ -122,7 +122,7 @@
 							</tbody>
 
 
-							</tbody>
+
 						</table>
 
 					</div>
